@@ -57,3 +57,14 @@ print(f"True Negatives (TN):  {cm[0,0]}")
 print(f"False Positives (FP): {cm[0,1]}")
 print(f"False Negatives (FN): {cm[1,0]}")
 print(f"True Positives (TP):  {cm[1,1]}")
+
+# discussion
+"""
+1. High Specificity: The model achieved perfect specificity (0% FP rate) for AML classification, meaning no AML samples were incorrectly classified as ALL.
+
+2. Strong Overall Performance: The model achieved ~87% accuracy across both cancer types, indicating good generalization to unseen data.
+
+3. Balanced Metrics: Precision and recall are closely aligned, suggesting the model is neither biased toward false positives nor false negatives.
+
+4. Minor Classification Errors: 2 out of 15 test samples (13.3%) were misclassified, both false negatives (ALL samples predicted as AML). This suggests the model may be slightly conservative in predicting ALL.
+"""
