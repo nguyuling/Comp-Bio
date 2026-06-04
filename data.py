@@ -1,3 +1,10 @@
+"""
+    NAME: NGU YU LING
+    MATRIC NO: A23CS0149
+"""
+
+#! Data Preprocessing
+
 # data loading
 import pandas as pd
 actual_df = pd.read_csv('raw data/actual.csv')
