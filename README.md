@@ -75,6 +75,7 @@ Predicted:    AML  ALL
 Actual AML:  [10    0]
 Actual ALL:  [ 2    3]
 ```
+![Confusion Matrix](confusion_matrix.png)
 
 **Breakdown**:
 - **True Negatives (TN)**: 10 - Correctly identified AML cases
