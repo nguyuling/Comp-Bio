@@ -30,8 +30,9 @@
 - **Class Distribution**:
   - AML (Acute Myeloid Leukemia): majority class
   - ALL (Acute Lymphoblastic Leukemia): minority class
-
-<img src="class_distribution.png" width="400" margin-left="auto" margin-right="auto" alt="Class Distribution">
+<center>
+    <img src="class_distribution.png" width="400" alt="Class Distribution">
+</center>
 
 
 # Part 2: Model Implementation
@@ -55,7 +56,9 @@
 3. **Model Training**:
    - Fitted Random Forest Classifier on training data by using `sklearn.ensemble.RandomForestClassifier`
    - First Decision Tree (out of the default 100 decision trees):
-    <img src="first_decision_tree.png" align="center" alt="First Decision Tree">
+    <center>
+    <img src="first_decision_tree.png" alt="First Decision Tree">
+    </center>
 
 4. **Predictions**:
    - Generated predictions on test set samples
@@ -79,8 +82,9 @@ Predicted:    AML  ALL
 Actual AML:  [10    0]
 Actual ALL:  [ 1    4]
 ```
-
-<img src="confusion_matrix.png" width="400" align="center" alt="Confusion Matrix">
+<center>
+    <img src="confusion_matrix.png" width="400" alt="Confusion Matrix">
+</center>
 
 **Breakdown**:
 - **True Negatives (TN)**: 10 - Correctly identified AML cases
