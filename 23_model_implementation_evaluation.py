@@ -25,6 +25,24 @@ rfc.fit(X_train, y_train)
 # model testing
 y_pred = rfc.predict(X_test)
 
+# visualization of first decision tree in RFC
+import matplotlib.pyplot as plt
+plt.figure(figsize=(25, 12))
+
+from sklearn.tree import plot_tree
+plot_tree(
+    rfc.estimators_[0], 
+    filled=True, 
+    feature_names=list(X.columns), 
+    class_names=[str(cls) for cls in sorted(y.unique())],
+    rounded=True,
+    max_depth=3 # Restricts depth to 3 levels so it remains completely readable
+)
+
+plt.tight_layout()
+plt.savefig('first_decision_tree.png', dpi=300, bbox_inches='tight')
+plt.close()
+
 
 #! 3. Evaluation & Short Discussioon
 
@@ -36,9 +54,7 @@ print('Recall: ', recall_score(y_test, y_pred, average='weighted'))
 print('f1: ', f1_score(y_test, y_pred, average='weighted'))
 
 # confusion matrix
-import matplotlib.pyplot as plt
 import seaborn as sns
-
 cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=True,
             xticklabels=sorted(y_test.unique()), 
