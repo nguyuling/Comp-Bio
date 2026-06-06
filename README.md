@@ -31,7 +31,7 @@
   - AML (Acute Myeloid Leukemia): majority class
   - ALL (Acute Lymphoblastic Leukemia): minority class
 
-<img src="class_distribution.png" width="400" margin-left: auto; margin-right: auto; alt="Class Distribution">
+<img src="class_distribution.png" width="400" margin-left="auto" margin-right="auto" alt="Class Distribution">
 
 
 # Part 2: Model Implementation
