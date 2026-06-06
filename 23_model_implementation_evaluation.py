@@ -40,12 +40,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 cm = confusion_matrix(y_test, y_pred)
-plt.figure(figsize=(8, 6))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=True,
             xticklabels=sorted(y_test.unique()), 
             yticklabels=sorted(y_test.unique()),
             annot_kws={'fontsize': 14, 'fontweight': 'bold'})
-plt.title('Confusion Matrix - Random Forest Classifier', fontsize=14, fontweight='bold')
+plt.title('Confusion Matrix of Random Forest Classifier', fontsize=14, fontweight='bold')
 plt.ylabel('True Label', fontsize=12)
 plt.xlabel('Predicted Label', fontsize=12)
 plt.tight_layout()

@@ -70,10 +70,9 @@ for class_label in sorted(data[target_column].unique()):
 
 # bar chart with counts and percentages
 import matplotlib.pyplot as plt
-plt.figure(figsize=(10, 6))
-colors = ['#FF6B6B', '#4ECDC4']  # Red for AML, Teal for ALL
+colors = [ '#3895D3', '#072F5F']
 bars = plt.bar(class_counts.index, class_counts.values, color=colors, edgecolor='black', linewidth=1.5, alpha=0.8)
-plt.title('Sample Count by Cancer Type', fontsize=14, fontweight='bold')
+plt.title('Dataset Class Distribution', fontsize=14, fontweight='bold')
 plt.xlabel('Cancer Type', fontsize=12)
 plt.ylabel('Number of Samples', fontsize=12)
 plt.grid(axis='y', alpha=0.3)
@@ -83,4 +82,4 @@ for bar in bars:
     plt.text(bar.get_x() + bar.get_width()/2., height,
              f'{int(height)} ({percentage:.1f}%)',
              ha='center', va='bottom', fontweight='bold', fontsize=12)
-plt.show()
+plt.savefig('class_distribution.png', dpi=300, bbox_inches='tight')
