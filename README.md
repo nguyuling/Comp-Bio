@@ -67,32 +67,32 @@ First Decision Tree (out of the default 100 decision trees)
 
 | Metric | Score |
 |--------|-------|
-| **Accuracy** | 0.867 (86.7%) |
-| **Precision** | 0.889 (88.9%) |
-| **Recall** | 0.867 (86.7%) |
-| **F1-Score** | 0.856 (85.6%) |
+| **Accuracy** | 0.933 (93.3%) |
+| **Precision** | 0.939 (93.9%) |
+| **Recall** | 0.9333 (93.3%) |
+| **F1-Score** | 0.931 (93.1%) |
 
 ### Confusion Matrix Analysis
 
 ```
 Predicted:    AML  ALL
 Actual AML:  [10    0]
-Actual ALL:  [ 2    3]
+Actual ALL:  [ 1    4]
 ```
 ![Confusion Matrix](confusion_matrix.png)
 
 **Breakdown**:
 - **True Negatives (TN)**: 10 - Correctly identified AML cases
 - **False Positives (FP)**: 0 - No incorrect AML predictions
-- **False Negatives (FN)**: 2 - AML cases misclassified as ALL
-- **True Positives (TP)**: 3 - Correctly identified ALL cases
+- **False Negatives (FN)**: 1 - AML cases misclassified as ALL
+- **True Positives (TP)**: 4 - Correctly identified ALL cases
 
 ### Key Findings
 
 1. **High Specificity**: The model achieved perfect specificity (0% FP rate) for AML classification, meaning no AML samples were incorrectly classified as ALL.
 
-2. **Strong Overall Performance**: The model achieved ~87% accuracy across both cancer types, indicating good generalization to unseen data.
+2. **Strong Overall Performance**: The model achieved ~93% accuracy across both cancer types, indicating good generalization to unseen data.
 
 3. **Balanced Metrics**: Precision and recall are closely aligned, suggesting the model is neither biased toward false positives nor false negatives.
 
-4. **Minor Classification Errors**: 2 out of 15 test samples (13.3%) were misclassified, both false negatives (ALL samples predicted as AML). This suggests the model may be slightly conservative in predicting ALL.
+4. **Minor Classification Errors**: 1 out of 15 test samples (6.67%) were misclassified, both false negatives (ALL samples predicted as AML). This suggests the model may be slightly conservative in predicting ALL.
