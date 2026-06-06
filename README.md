@@ -1,4 +1,4 @@
-# Data Preparation & Exploration
+# Part 1: Data Preparation & Exploration
 
 ### Data Preprocessing Steps
 
@@ -32,7 +32,7 @@
 ![Class Distribution](class_distribution.png)
 
 
-# Model Implementation
+# Part 2: Model Implementation
 
 ### Model Architecture
 - **Algorithm**: Random Forest Classifier
@@ -57,7 +57,7 @@
    - Generated predictions on test set samples
 
 
-# Evaluation & Discussion
+# Part 3: Evaluation & Discussion
 
 ### Model Performance Metrics
 
