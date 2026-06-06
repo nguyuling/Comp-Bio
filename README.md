@@ -54,12 +54,13 @@
 
 3. **Model Training**:
    - Fitted Random Forest Classifier on training data by using `sklearn.ensemble.RandomForestClassifier`
+   - First Decision Tree (out of the default 100 decision trees):
+        ![First Decision Tree](first_decision_tree.png)
 
 4. **Predictions**:
    - Generated predictions on test set samples
 
-First Decision Tree (out of the default 100 decision trees)
-![First Decision Tree](first_decision_tree.png)
+
 
 # Part 3: Evaluation & Discussion
 
