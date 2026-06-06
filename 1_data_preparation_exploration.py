@@ -72,6 +72,7 @@ for class_label in sorted(data[target_column].unique()):
 import matplotlib.pyplot as plt
 colors = [ '#3895D3', '#072F5F']
 bars = plt.bar(class_counts.index, class_counts.values, color=colors, edgecolor='black', linewidth=1.5, alpha=0.8)
+plt.style.use('dark_background')
 plt.title('Dataset Class Distribution', fontsize=14, fontweight='bold')
 plt.xlabel('Cancer Type', fontsize=12)
 plt.ylabel('Number of Samples', fontsize=12)
