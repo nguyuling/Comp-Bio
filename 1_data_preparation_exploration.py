@@ -73,14 +73,14 @@ import matplotlib.pyplot as plt
 plt.style.use('dark_background')
 colors = [ '#3895D3', '#072F5F']
 bars = plt.bar(class_counts.index, class_counts.values, color=colors, edgecolor='black', linewidth=1.5, alpha=0.8)
-plt.title('Dataset Class Distribution', fontsize=14, fontweight='bold')
-plt.xlabel('Cancer Type', fontsize=12)
-plt.ylabel('Number of Samples', fontsize=12)
+plt.title('Dataset Class Distribution', fontsize=12, fontweight='bold')
+plt.xlabel('Cancer Type', fontsize=10)
+plt.ylabel('Number of Samples', fontsize=10)
 plt.grid(axis='y', alpha=0.3)
 for bar in bars:
     height = bar.get_height()
     percentage = (height / len(data) * 100)
     plt.text(bar.get_x() + bar.get_width()/2., height,
              f'{int(height)} ({percentage:.1f}%)',
-             ha='center', va='bottom', fontweight='bold', fontsize=12)
+             ha='center', va='bottom', fontweight='bold', fontsize=10)
 plt.savefig('class_distribution.png', dpi=300, bbox_inches='tight')

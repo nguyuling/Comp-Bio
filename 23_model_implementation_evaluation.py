@@ -37,7 +37,6 @@ plot_tree(
     feature_names=list(X.columns), 
     class_names=[str(cls) for cls in sorted(y.unique())],
     rounded=True,
-    max_depth=3 # Restricts depth to 3 levels so it remains completely readable
 )
 
 plt.tight_layout()
@@ -60,11 +59,11 @@ cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=True,
             xticklabels=sorted(y_test.unique()), 
             yticklabels=sorted(y_test.unique()),
-            annot_kws={'fontsize': 14, 'fontweight': 'bold'})
+            annot_kws={'fontsize': 10, 'fontweight': 'bold'})
 plt.style.use('dark_background')
 plt.title('Confusion Matrix of Random Forest Classifier', fontsize=12, fontweight='bold')
-plt.ylabel('True Label', fontsize=12)
-plt.xlabel('Predicted Label', fontsize=12)
+plt.ylabel('True Label', fontsize=10)
+plt.xlabel('Predicted Label', fontsize=10)
 plt.savefig('confusion_matrix.png', dpi=300, bbox_inches='tight')
 plt.close()
 
