@@ -1,3 +1,5 @@
+**Github Repo**: https://github.com/nguyuling/Comp-Bio
+
 # Part 1: Data Preparation & Exploration
 
 ### Data Preprocessing Steps
@@ -46,16 +48,18 @@
    - Separated target (y): Cancer type label (last column)
 
 2. **Train-Test Split**:
-   - Applied 80/20 split with `random_state=42` for reproducibility
+   - Applied 80/20 split with `random_state=42` for reproducibility using `sklearn.model_selection.train_test_split`
    - Training set: ~58 samples for model training
    - Test set: ~14 samples for model evaluation
 
 3. **Model Training**:
-   - Fitted Random Forest Classifier on training data
+   - Fitted Random Forest Classifier on training data by using `sklearn.ensemble.RandomForestClassifier`
 
 4. **Predictions**:
    - Generated predictions on test set samples
 
+First Decision Tree (out of the default 100 decision trees)
+![First Decision Tree](first_decision_tree.png)
 
 # Part 3: Evaluation & Discussion
 
