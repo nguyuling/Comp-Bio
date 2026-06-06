@@ -27,6 +27,7 @@ y_pred = rfc.predict(X_test)
 
 # visualization of first decision tree in RFC
 import matplotlib.pyplot as plt
+plt.style.use('dark_background')
 plt.figure(figsize=(25, 12))
 
 from sklearn.tree import plot_tree
@@ -60,10 +61,10 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=True,
             xticklabels=sorted(y_test.unique()), 
             yticklabels=sorted(y_test.unique()),
             annot_kws={'fontsize': 14, 'fontweight': 'bold'})
-plt.title('Confusion Matrix of Random Forest Classifier', fontsize=14, fontweight='bold')
+plt.style.use('dark_background')
+plt.title('Confusion Matrix of Random Forest Classifier', fontsize=12, fontweight='bold')
 plt.ylabel('True Label', fontsize=12)
 plt.xlabel('Predicted Label', fontsize=12)
-plt.tight_layout()
 plt.savefig('confusion_matrix.png', dpi=300, bbox_inches='tight')
 plt.close()
 
