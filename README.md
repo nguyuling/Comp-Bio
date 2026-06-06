@@ -30,8 +30,7 @@
 - **Class Distribution**:
   - AML (Acute Myeloid Leukemia): majority class
   - ALL (Acute Lymphoblastic Leukemia): minority class
-
-![Class Distribution](class_distribution.png)
+    ![Class Distribution](class_distribution.png)
 
 
 # Part 2: Model Implementation
@@ -80,7 +79,7 @@ Predicted:    AML  ALL
 Actual AML:  [10    0]
 Actual ALL:  [ 1    4]
 ```
-![Confusion Matrix](confusion_matrix.png)
+      ![Confusion Matrix](confusion_matrix.png)     
 
 **Breakdown**:
 - **True Negatives (TN)**: 10 - Correctly identified AML cases
