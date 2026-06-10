@@ -68,36 +68,35 @@
 4. **Predictions**:
    - Generated predictions on test set samples
 
+# Part 3: Model Optimization
 
-# Part 3: Evaluation & Discussion
+# Part 4: Performance Evaluation
 
 ### Model Performance Metrics
 
-| Metric | Score |
-|--------|-------|
-| **Accuracy** | 0.933 (93.3%) |
-| **Precision** | 0.939 (93.9%) |
-| **Recall** | 0.9333 (93.3%) |
-| **F1-Score** | 0.931 (93.1%) |
+| Metric | Before Optimization | After Optimization |
+| --- | --- | --- |
+| **Accuracy** | 0.867 (86.7%) | 
+| **Precision** | 0.889 (88.9%) |
+| **Recall** | 0.867 (86.7%) |
+| **F1-Score** | 0.856 (85.6%) |
 
 ### Confusion Matrix Analysis
 
 ```
-Predicted:    AML  ALL
-Actual AML:  [10    0]
-Actual ALL:  [ 1    4]
+             Before Optimization:        After Optimization:
+Predicted:        AML  ALL                    AML  ALL
+Actual AML:       [10   0]                    [10   0]
+Actual ALL:       [ 2   3]                    [ 0   4]
 ```
+
 <p align="center">
-    <img src="confusion_matrix.png" width="400" alt="Confusion Matrix">
+    <img src="confusion_matrix_before.png" width="400" alt="Confusion Matrix Before">
+    <img src="confusion_matrix_after.png" width="400" alt="Confusion Matrix After">
 </p>
 
-**Breakdown**:
-- **True Negatives (TN)**: 10 - Correctly identified AML cases
-- **False Positives (FP)**: 0 - No incorrect AML predictions
-- **False Negatives (FN)**: 1 - AML cases misclassified as ALL
-- **True Positives (TP)**: 4 - Correctly identified ALL cases
 
-### Key Findings
+# Biological Intepretation
 
 1. **High Specificity**: The model achieved perfect specificity (0% FP rate) for AML classification, meaning no AML samples were incorrectly classified as ALL.
 
