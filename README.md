@@ -69,12 +69,12 @@
    - Generated predictions on test set samples
 
 # Part 3: Model Optimization
-To tackle the High-Dimensional, Low-Sample-Size challenge ($7,128$ genes vs. only $72$ samples), an automated machine learning optimization pipeline was constructed. Rather than simply tuning hyperparameters on noisy raw features, a combination of statistical feature reduction and classifier optimization was performed within an independent cross-validation loop to eliminate data leakage.
+To tackle the High-Dimensional, Low-Sample-Size challenge (7,128 genes vs. only 72 samples), an automated machine learning optimization pipeline was constructed. Rather than simply tuning hyperparameters on noisy raw features, a combination of statistical feature reduction and classifier optimization was performed within an independent cross-validation loop to eliminate data leakage.
 
 ### Optimization Methodology:
-1. **Feature Reduction (`SelectKBest`)**: Utilized an ANOVA F-test (`f_classif`) to extract the top $100$ most statistically significant distinguishing genes, dropping over $98.5\%$ of uninformative genomic noise.
+1. **Feature Reduction (`SelectKBest`)**: Utilized an ANOVA F-test (`f_classif`) to extract the top 100 most statistically significant distinguishing genes, dropping over 98.5\% of uninformative genomic noise.
 2. **Hyperparameter Tuning (`GridSearchCV`)**: Executed a 5-Fold Stratified Cross-Validation search across various random forest structural constraints.
-3. **Class Balancing (`class_weight`)**: Adjusted the decision trees to balance out the minority class penalty, compensating for the imbalance between ALL ($47$) and AML ($25$) distributions.
+3. **Class Balancing (`class_weight`)**: Adjusted the decision trees to balance out the minority class penalty, compensating for the imbalance between ALL (47) and AML (25) distributions.
 
 ### Best Parameters Found:
 * `feature_selection__k`: `100`
