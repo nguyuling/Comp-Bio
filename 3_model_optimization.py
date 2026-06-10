@@ -47,26 +47,23 @@ y_pred = best_model.predict(X_test)
 #! Before Optimization: Model Evaluation
 
 # model performance scoring
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 print('Accuracy: ', accuracy_score(y_test, y_pred))
 print('Precision: ', precision_score(y_test, y_pred, average='weighted'))
 print('Recall: ', recall_score(y_test, y_pred, average='weighted'))
 print('f1-score: ', f1_score(y_test, y_pred, average='weighted'))
 
 # confusion matrix
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-
 import matplotlib.pyplot as plt
 plt.style.use('dark_background')
 plt.figure(figsize=(6, 5))
+cm = confusion_matrix(y_test, y_pred)
 
 import seaborn as sns
 sns.heatmap(cm, annot=True, fmt='d', cmap='Greens', cbar=True,
             xticklabels=sorted(y_test.unique()), 
             yticklabels=sorted(y_test.unique()),
-            annot_kws={'fontsize': 12, 'fontweight': 'bold'})
-
+            annot_kws={'fontsize': 10, 'fontweight': 'bold'})
 plt.title('Confusion Matrix: Optimized Pipeline', fontsize=12, fontweight='bold')
 plt.ylabel('True Label', fontsize=10)
 plt.xlabel('Predicted Label', fontsize=10)
