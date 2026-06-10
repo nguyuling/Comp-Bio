@@ -26,7 +26,13 @@
 
 ### Data Exploration Results
 
-- **Dataset Shape**: 72 samples × 7,130 columns (7,128 gene features + patient ID + cancer type)
+- **Dataset Shape**: 72 samples × 7,130 columns (7,128 gene features + patient ID + cancer class)
+    | Dataset Overview |  Number of data |
+    | --- | --- |
+    | Number of Samples | 72 Samples |
+    | Number of Attributes | 7128 gene features |
+    | Target Class | 2 classes |
+
 - **Class Distribution**:
   - ALL (Acute Lymphoblastic Leukemia): majority class
   - AML (Acute Myeloid Leukemia): minority class
