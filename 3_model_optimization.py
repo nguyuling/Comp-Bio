@@ -70,7 +70,6 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Greens', cbar=True,
 plt.title('Confusion Matrix: Optimized Pipeline', fontsize=12, fontweight='bold')
 plt.ylabel('True Label', fontsize=10)
 plt.xlabel('Predicted Label', fontsize=10)
-plt.tight_layout()
 plt.savefig('confusion_matrix_after.png', dpi=300, bbox_inches='tight')
 plt.close()
 
