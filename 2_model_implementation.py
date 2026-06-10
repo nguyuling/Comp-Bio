@@ -54,8 +54,11 @@ print('Recall: ', recall_score(y_test, y_pred, average='weighted'))
 print('f1: ', f1_score(y_test, y_pred, average='weighted'))
 
 # confusion matrix
-import seaborn as sns
+plt.style.use('dark_background')
+plt.figure(figsize=(6, 5))
 cm = confusion_matrix(y_test, y_pred)
+
+import seaborn as sns
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=True,
             xticklabels=sorted(y_test.unique()), 
             yticklabels=sorted(y_test.unique()),
